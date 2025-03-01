@@ -1,0 +1,78 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./database.db"
+}
+
+model Users{
+  uid String @id @default(uuid()) @unique
+  firstName String
+  lastName String
+  email String @unique
+  password String
+  createDate DateTime @default(now())
+  updateDate DateTime @updatedAt
+  meals Meals[]
+  foods foods[]
+  statistic Statistics?
+}
+
+model Meals {
+  mid String @id @default(uuid()) @unique
+  titel String
+  rating Int
+  breakfast     Boolean
+  lunch         Boolean
+  dinner        Boolean
+  createDate DateTime @default(now())
+  updateDate DateTime @updatedAt
+  user Users @relation(fields: [email], references: [email])
+  email String
+  foods foods[]
+  statistic Statistics?
+}
+
+model Statistics {
+  sid String @id @default(uuid()) @unique
+  totalCalories Int
+  averageMealRating Int
+  meatFreeMeals Int
+  co2Savings Int
+  createDate DateTime @default(now())
+  updateDate DateTime @updatedAt
+  meal Meals @relation(fields: [mealid], references: [mid])
+  mealid String @unique
+  user Users @relation(fields: [email], references: [email])
+  email String @unique
+}
+
+model foods {
+  fid           String @id @default(uuid()) @unique
+  name          String
+  calories      Int
+  carbohydrates Int
+  fat           Int
+  protein       Int
+  containsMeat  Boolean
+  vegetarian    Boolean
+  vegan         Boolean
+  breakfast     Boolean
+  lunch         Boolean
+  dinner        Boolean
+  createDate    DateTime @default(now())
+  updateDate    DateTime @updatedAt
+  meal          Meals?    @relation(fields: [mealid], references: [mid])
+  mealid        String? 
+  user          Users @relation(fields: [email], references: [email])
+  email         String
+}
+

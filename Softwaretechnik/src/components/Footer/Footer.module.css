@@ -1,0 +1,36 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 20px; /* Adjust the margin as needed */
+  }
+  
+  .socialsHeader {
+    font-size: larger;
+    font-weight: bolder;
+    width: 50vw;
+    text-align: center;
+    text-decoration-line: underline;
+    text-decoration-thickness: 3px;
+  }
+  
+  .socialsContainer {
+    display: flex;
+    width: 50vw;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  
+  .socialsItem {
+    display: flex;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .socialsPictures {
+    width: 80px;
+    height: 80px;
+    margin-left: 20px;
+    margin-right: 10px;
+  }
+  

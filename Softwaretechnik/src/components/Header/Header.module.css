@@ -1,0 +1,75 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  background-color: #333;
+}
+
+.profile {
+  position: relative;
+}
+
+.profilePicture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.level {
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  background-color: green;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.text {
+  color: white;
+}
+
+.premium {
+  position: absolute;
+  right: 50%;
+
+  padding: 4px 10px;
+  background-color: yellow;
+  border-radius: 5px;
+
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.navBar {
+  position: absolute;
+  right: 20px;
+  color: white;
+}
+
+.rewards {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(102px, 149px);
+  width: 300px;
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}

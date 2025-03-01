@@ -1,0 +1,73 @@
+/* AddFoodForm.module.css */
+
+.overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  align-content: center;
+  justify-content: center;
+}
+
+.text {
+  border-radius: 15px;
+  border-color: black;
+  background-color: white;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  background: linear-gradient(to bottom right, #ffffff, #8a2be2);
+}
+
+.tables {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: flex-start;
+}
+
+.headline {
+  justify-content: center;
+}
+
+.label {
+  min-width: 120px;
+  display: inline-block;
+}
+
+.sendButton {
+  padding: 10px 20px;
+  background-color: purple;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.sendButton:hover {
+  background-color: #0056b3;
+}
+
+.button {
+  padding: 6px 10px;
+  background-color: purple;
+  color: black;
+  border: none;
+  border-radius: 10%;
+  cursor: pointer;
+  font-size: 10px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}

@@ -1,0 +1,98 @@
+.container {
+    width: 50vw;
+    height: 50vh;
+    overflow: hidden;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+
+    margin-top: 14%;
+}
+.slides {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+.slide {
+    width: 33.3333%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.slide h2 {
+    margin: 0;
+}
+.stats {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.stat {
+    text-align: center;
+}
+.statCircle {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+}
+.statValue {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.statLabel {
+    margin-top: 10px;
+}
+.statCircle.carbs {
+    background: conic-gradient(#4caf50 var(--percent), #e0e0e0 0);
+}
+.statCircle.fat {
+    background: conic-gradient(#f44336 var(--percent), #e0e0e0 0);
+}
+.statCircle.protein {
+    background: conic-gradient(#ff9800 var(--percent), #e0e0e0 0);
+}
+
+.statCircle.co2 {
+    background-color: #add8e6;  
+}
+.statCircle.co2Medium {
+    background-color: yellow;  
+}
+
+.statCircle.co2High {
+    background-color: red;  
+}
+
+.navDots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+.navDot {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.navDot.active {
+    background-color: #333;
+}
