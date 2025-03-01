@@ -1,0 +1,192 @@
+:root {
+    --shadowsize: 4px;
+    --shadowcolor: #3e3e3e;
+    --highlightcolor: #eaeaea;
+} 
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+.content {
+    width: min(100vw,55.56vh); 
+    height: min(100vh,180vw);
+    background-color: orange;
+
+    margin: 0px auto;
+}
+
+#header {
+    height: 22.22%; 
+    background-color: rgb(55, 137, 148);
+
+    display: flex;
+    justify-content: center;
+    align-items: start; 
+} 
+
+@media (min-width: 480px) {
+    #header {
+        background-image: url('images/header-image3.png');
+        background-size: cover;
+    }
+}
+
+#headerContent {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 150%;
+    padding: 1em;
+
+    text-align: center;
+}
+
+#playfield {
+    height: 55.56%; 
+    background-color: grey;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+    align-content: space-between;
+
+    position: relative;
+}
+
+#buttonbar {
+    height: 16.67%;  
+    background-color: rgb(68, 162, 176);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#buttonbar > button {
+    width: 30%;
+    height: 40%;
+
+    font-size: larger;
+    border-width: 1px;
+    border-radius: 10px;
+}
+
+#footer {
+    height: 5.56%; 
+    background-color: rgb(46, 121, 135);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footerContent {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 120%;
+}
+
+.cell {
+    background-color: lightgray;
+    border: var(--shadowsize) solid lightgrey;
+
+    width: calc(100% / 9 - 11px);
+    height: calc(100% / 9 - 11px);
+
+    flex-shrink: 0;
+}
+
+.covered {
+    border-top: var(--shadowsize) solid var(--highlightcolor);
+    border-left: var(--shadowsize) solid var(--highlightcolor);
+    border-bottom: var(--shadowsize) solid var(--shadowcolor);
+    border-right: var(--shadowsize) solid var(--shadowcolor);
+}
+
+.cellsymbol {
+    background-image: url('images/minesweeper2.svg');
+    background-size: 1000% 100%;
+}
+
+.cellsymbol1 {
+    background-position: 0%;
+    background-repeat: no-repeat;
+}
+
+.cellsymbol2 {
+    background-position: 11%;
+    background-repeat: no-repeat;
+}
+
+.cellsymbol3 {
+    background-position: 22%;
+    background-repeat: no-repeat;
+}
+
+.cellsymbol4 {
+    background-position: 33%;
+    background-repeat: no-repeat;
+}
+
+.cellsymbol5 {
+    background-position: 44%;
+    background-repeat: no-repeat;
+}
+
+.cellsymbol6 {
+    background-position: 55%;
+    background-repeat: no-repeat;
+}
+
+.cellsymbol7 {
+    background-position: 66%;
+    background-repeat: no-repeat;
+}
+
+.cellsymbol8 {
+    background-position: 77%;
+    background-repeat: no-repeat;
+}
+
+.cellsymbolf {
+    background-position: 88%;
+    background-repeat: no-repeat;
+}
+
+.cellsymbolm {
+    background-position: 100%;
+    background-repeat: no-repeat;
+}
+
+#minesymbol {
+    background-color: red;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay div{
+    border: 2px solid black;
+    padding: 20px;
+    font-size: 3em;
+
+    background-color: white;
+    border-radius: 10px;
+
+    flex: 0 0 auto;
+}
