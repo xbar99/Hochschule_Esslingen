@@ -12,6 +12,6 @@
 {\pntext\f2\'B7\tab}9. Open a second DB2 Command Window. Let user su connect to your \cf3 local SAMPLE database\cf0  using Lab2-Usr as password. Get a list of all tables\line\cf1 db2 connect to sample user Su using Lab2-Usr\line db2 list tables\par
 {\pntext\f2\'B7\tab}\cf0 10. Open a third DB2 Command Window. Let user bob connect to your \cf3 classmate\rquote s remote\cf0  RMTSAMP database using Lab2-Usr as password. Get a list of all tables.\line\cf1 db2 connect to RMTSAMP user Bob using Lab2-Usr \line db2 list tables\cf0\par
 {\pntext\f2\'B7\tab}11. Switch back to your first DB2 Command Window. List out all connections to the current instance \cf3 db2inst1\cf0 . Which applications do you expect to be connected, which ones are missing, why are they missing?\line - \b0 mit dem Befehl:\b  db2 list applications\line => \b0 ... zeigt \b alle aktiven Verbindungen \b0 (Anwendungen) zur aktuellen Instanz an, die in deinem Fall \cf3\b db2inst1 \cf0\b0 ist\b\line - \b0 only \b Su \b0 connection gets listed because all other connection are either connected to \b DEVELOP \b0 (classmates connection) or connected to remote database (Bob)\b\par
-{\pntext\f2\'B7\tab}12. Attach to node RMTNODE. List out all the connections to RMTNODE.\line\line\line\line\line\line\line\line\line\line\line\line\line\line\line\line\line\line\line\line\line\line\line\line\line\line\line\line\line d\par
+{\pntext\f2\'B7\tab}12. Attach to node RMTNODE. List out all the connections to RMTNODE.\par
 }
  
